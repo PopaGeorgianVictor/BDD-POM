@@ -24,14 +24,5 @@ class Home_page(Base_page)
         for option in options:
             print(option.text)
 
-    def select_using_css(self):
-        self.driver.find_element(*self.DROPDOWN_CSS).click()
-        self.driver.find_element(*self.OPTION_CSS).click()
-        try:
-            self.driver.find_element(*self.SITE_BTN)
-            print('Element exist')
-
-        except NoSuchElementException:
-            print("Element does not exist")
 
 
