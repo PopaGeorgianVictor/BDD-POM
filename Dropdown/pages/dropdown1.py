@@ -17,7 +17,7 @@ class Home_page(Base_page)
         dropdown_object.select_by_value('C#')
         dropdown_object.select_by_value('SQL')
 
-    def display_all_option(self):
+    def display_all_options(self):
         dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
         dropdown_object = Select(dropdown)
 

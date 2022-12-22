@@ -10,6 +10,6 @@ def step_impl(context):
 
 @then("A dropdown menu opens with related options")
 def step_impl(context):
-    context.home_page.check_all_option()
+    context.home_page.display_all_options()
 
 @when("I click on  'Select GitHub Project'")
