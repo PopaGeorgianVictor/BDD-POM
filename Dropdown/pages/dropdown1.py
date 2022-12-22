@@ -17,10 +17,16 @@ class Home_page(Base_page)
         dropdown_object.select_by_value('C#')
         dropdown_object.select_by_value('SQL')
 
-    def check_all_option(self):
-        options = self.driver.find_elements(*self.DROPDOWN_CLASS)
-        for option in options:
+    def display_all_option(self):
+        dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
+        dropdown_object = Select(dropdown)
+
+        all_options = dropdown_object.options
+        for option in all_options:
             print(option.text)
+
+
+
 
 
 
