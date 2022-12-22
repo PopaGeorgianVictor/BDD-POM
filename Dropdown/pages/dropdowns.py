@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 from BDD.pages.base_page import Base_page
 
-class FirstDropdown(Base_page)
+class Dropdown(Base_page)
 
     DROPDOWN = (By.ID, 'coding-language-select')
 

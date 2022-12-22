@@ -2,20 +2,20 @@ from behave import *
 
 @given("I am on '/dropdown' homepage")
 def step_impl(context):
-    context.first_dropdown_object_object.navigate_to_page()
+    context.dropdown_object.navigate_to_page()
 
 @when("I click on  '--Please choose an option--' from 'Coding Languages List'")
 def step_impl(context):
-    context.first_dropdown_object.click()
+    context.dropdown_object.click()
 
 @then("A dropdown menu opens with related options")
 def step_impl(context):
-    context.first_dropdown_object.display_all_options()
+    context.dropdown_object.display_all_options()
 
 @when("I select options one by one from dropdown")
 def step_impl(context):
-    context.first_dropdown_object.select()
+    context.dropdown_object.select()
 
 @then("I can select any option from dropdown")
 def step_impl(context):
-    context.first_dropdown_object.select()
+    context.dropdown_object.select()
