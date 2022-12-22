@@ -8,10 +8,10 @@ class Dropdown(Base_page)
     def navigate_to_page(self):
         self.driver.get()
 
-    def click(self):
+    def click_first_dropdown(self):
         self.driver.find_element(*self.DROPDOWN_CLASS).click()
 
-    def display_all_options(self):
+    def display_all_options_first_dropdown(self):
         dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
         dropdown_object = Select(dropdown)
 
@@ -19,7 +19,7 @@ class Dropdown(Base_page)
         for option in all_options:
             print(option.text)
 
-    def select(self):
+    def select_first_dropdown(self):
         dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
         dropdown_object = Select(dropdown)
         dropdown_object.select_by_value('Python')
