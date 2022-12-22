@@ -22,3 +22,7 @@ class Home_page(Base_page)
         options = self.driver.find_elements(*self.DROPDOWN_CLASS)
         for option in options:
             print(option.text)
+
+    def select_using_css(self):
+        self.driver.find_element(*self.DROPDOWN_CSS).click()
+        self.driver.find_element(*self.OPTION_CSS).click()
