@@ -16,3 +16,9 @@ Feature:Testing if the dropdowns work and if I can selected options and accesing
     Given : I am on '/dropdown' homepage
     When : I selected options from dropdown menu
     Then : I can select any option from dropdown
+
+
+  Scenario: Check that the user can selected option from 'Select GitHub Project'
+    Given : I am on '/dropdown' homepage
+    When : I selected options from dropdown menu
+    Then : I can select any option from dropdown and I have acces to the right link
