@@ -6,7 +6,7 @@ def step_impl(context):
 
 @when("I click on  '--Please choose an option--' from 'Coding Languages List'")
 def step_impl(context):
-    context.first_dropdown_object.select()
+    context.first_dropdown_object.click()
 
 @then("A dropdown menu opens with related options")
 def step_impl(context):
