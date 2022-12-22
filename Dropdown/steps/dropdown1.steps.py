@@ -12,4 +12,3 @@ def step_impl(context):
 def step_impl(context):
     context.home_page.display_all_options()
 
-@when("I click on  'Select GitHub Project'")
