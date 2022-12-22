@@ -4,12 +4,9 @@ Feature:Testing if the dropdowns work and if I can selected options and accesing
     Given : I am on '/dropdown' homepage
     When : I click on  '--Please choose an option--' from 'Coding Languages List'
     Then : A dropdown menu opens with related options
-
-
-  Scenario: Check that the user can selected option from 'Coding Languages List'
-    Given : I am on '/dropdown' homepage
-    When : I selected options from dropdown menu
+    When : I select options one by one from dropdown
     Then : I can select any option from dropdown
+
 
   Scenario: Check that the user can have access on dropdown menu 2
     Given :I am on '/dropdown' homepage

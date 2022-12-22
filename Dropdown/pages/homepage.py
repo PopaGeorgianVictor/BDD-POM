@@ -11,9 +11,8 @@ class Home_page(Base_page)
         self.driver.get()
 
     def select_using_class(self):
-
-
-    def select_option(self):
+        my_dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
+        dropdown_object = Select(my_dropdown)
         dropdown_object.select_by_value('Python')
         dropdown_object.select_by_value('Java')
         dropdown_object.select_by_value('PHP')
