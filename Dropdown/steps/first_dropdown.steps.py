@@ -15,3 +15,7 @@ def step_impl(context):
 @when("I select options one by one from dropdown")
 def step_impl(context):
     context.first_dropdown_object.select()
+
+@then("I can select any option from dropdown")
+def step_impl(context):
+    context.first_dropdown_object.select()
