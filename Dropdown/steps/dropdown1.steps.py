@@ -6,10 +6,10 @@ def step_impl(context):
 
 @when("I click on  '--Please choose an option--' from 'Coding Languages List'")
 def step_impl(context):
-    context.home_page.select_using_class()
+    context.home_page.select()
 
 @then("A dropdown menu opens with related options")
 def step_impl(context):
-    context.home_page.check_all_option_class()
+    context.home_page.check_all_option()
 
 @when("I click on  'Select GitHub Project'")

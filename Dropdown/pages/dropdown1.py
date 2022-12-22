@@ -10,7 +10,7 @@ class Home_page(Base_page)
     def navigate_to_page(self):
         self.driver.get()
 
-    def select_using_class(self):
+    def select(self):
         my_dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
         dropdown_object = Select(my_dropdown)
         dropdown_object.select_by_value('Python')
@@ -19,7 +19,7 @@ class Home_page(Base_page)
         dropdown_object.select_by_value('C#')
         dropdown_object.select_by_value('SQL')
 
-    def check_all_option_class(self):
+    def check_all_option(self):
         options = self.driver.find_elements(*self.DROPDOWN_CLASS)
         for option in options:
             print(option.text)
