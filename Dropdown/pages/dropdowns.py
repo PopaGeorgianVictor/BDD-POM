@@ -2,7 +2,7 @@ from selenium.webdriver.common.by import By
 from Dropdown.pages.base_page import Base_page
 from selenium.webdriver.support.select import Select
 
-class Dropdown(Base_page):
+class Dropdown(BasePage):
 
     FIRST_DROPDOWN = (By.ID, 'coding-language-select')
     SECOND_DROPDOWN = (By.ID, "dropdownMenuButton")

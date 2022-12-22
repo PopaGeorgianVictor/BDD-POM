@@ -1,2 +1,5 @@
-class Base_page(Browser):
+from Dropdown.browser import Browser
+
+
+class BasePage(Browser):
     pass
