@@ -1,4 +1,4 @@
-Feature: It is tested if the dropdowns work and if I can access the links
+Feature:Testing if the dropdowns work and if I can access the links
 
   Scenario: Check that the user can access '/dropdown' page
     Given : I am on homepage
