@@ -12,3 +12,6 @@ def step_impl(context):
 def step_impl(context):
     context.first_dropdown_object.display_all_options()
 
+@when("I select options one by one from dropdown")
+def step_impl(context):
+    context.first_dropdown_object.select()
