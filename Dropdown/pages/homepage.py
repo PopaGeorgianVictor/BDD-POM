@@ -5,6 +5,7 @@ class Home_page(Base_page)
     DROPDOWN_CLASS= (By.ID, 'coding-language-select')
     DROPDOWN_CSS = (By.ID, "dropdownMenuButton")
     OPTION_CSS = (By.XPATH, '//*[@id="dropdowns"]/div[2]/div/ul/li[4]/a')
+    SITE_BTN = (By.CSS_SELECTOR, "span[title='PORTOFOLIO']")
 
     def navigate_to_page(self):
         self.driver.get()
@@ -26,3 +27,11 @@ class Home_page(Base_page)
     def select_using_css(self):
         self.driver.find_element(*self.DROPDOWN_CSS).click()
         self.driver.find_element(*self.OPTION_CSS).click()
+        try:
+            self.driver.find_element(*self.SITE_BTN)
+            print('Element exist')
+
+        except NoSuchElementException:
+            print("Element does not exist")
+
+
