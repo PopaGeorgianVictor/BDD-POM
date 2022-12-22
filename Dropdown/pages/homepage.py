@@ -9,7 +9,7 @@ class Home_page(Base_page)
     def navigate_to_page(self):
         self.driver.get()
 
-    def test_select_using_class(self):
+    def select_using_class(self):
         my_dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
         dropdown_object = Select(my_dropdown)
         dropdown_object.select_by_value('Python')
