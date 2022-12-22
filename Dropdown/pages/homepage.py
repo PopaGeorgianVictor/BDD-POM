@@ -17,3 +17,8 @@ class Home_page(Base_page)
         dropdown_object.select_by_value('PHP')
         dropdown_object.select_by_value('C#')
         dropdown_object.select_by_value('SQL')
+
+    def check_all_option_class(self):
+        options = self.driver.find_elements(*self.DROPDOWN_CLASS)
+        for option in options:
+            print(option.text)
