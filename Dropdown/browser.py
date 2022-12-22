@@ -9,8 +9,6 @@ class Browser:
     driver.maximize_window()
     driver.implicitly_wait(3)
 
-
-
    def close(self):
         self.driver.delete_all_cookies()
         self.driver.quit()
