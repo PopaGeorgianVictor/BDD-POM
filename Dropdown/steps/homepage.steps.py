@@ -8,7 +8,7 @@ def step_impl(context):
 def step_impl(context):
     context.home_page.select_using_class()
 
-@then("A dropdown menu opens with related options")
+@then("A dropdown menu opens with related options and I can select any option from menu")
 def step_impl(context):
     context.home_page.select_option()
 
