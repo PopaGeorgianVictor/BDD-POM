@@ -3,7 +3,8 @@ from BDD.pages.base_page import Base_page
 
 class Dropdown(Base_page)
 
-    DROPDOWN = (By.ID, 'coding-language-select')
+    FIRST_DROPDOWN = (By.ID, 'coding-language-select')
+    SECOND_DROPDOWN = (By.ID, "dropdownMenuButton")
 
     def navigate_to_page(self):
         self.driver.get()
