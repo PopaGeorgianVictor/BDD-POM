@@ -1,4 +1,4 @@
-from BDD.pages.dropdowns import Dropdown
+from Dropdown.pages.dropdowns import Dropdown
 from browser import Browser
 
 
