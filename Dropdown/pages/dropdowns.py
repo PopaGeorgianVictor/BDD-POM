@@ -39,10 +39,10 @@ class Dropdown(BasePage):
         self.driver.find_element(*self.OPTION_DROPDOWN).click()
         time.sleep(3)
         driver.switch_to.window(driver.window_handles[1])
-        print("Second window title = " + driver.title)
+        print("Second window title = " + self.driver.title)
 
         try:
-            driver.find_element(By.CSS_SELECTOR, "span[title='PORTOFOLIO']")
+            self.driver.find_element(By.CSS_SELECTOR, "span[title='PORTOFOLIO']")
             print('Element exist')
 
         except NoSuchElementException:
