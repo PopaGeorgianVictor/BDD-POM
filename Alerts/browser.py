@@ -2,7 +2,6 @@ from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
 from selenium.webdriver.firefox.service import Service
 
-
 class Browser:
     driver = webdriver.Chrome(service=Service(GeckoDriverManager().install()))
     driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/alert_confirm_prompt")
