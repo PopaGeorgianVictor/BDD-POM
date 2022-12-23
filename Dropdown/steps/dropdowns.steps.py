@@ -19,3 +19,7 @@ def step_impl(context):
 @then("I can select any option from dropdown")
 def step_impl(context):
     context.dropdown_object.select_first_dropdown()
+
+@when("I click on  'Select GitHub Project' ")
+def step_impl(context):
+    context.click_second_dropdown()
