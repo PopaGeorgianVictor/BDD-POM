@@ -22,6 +22,7 @@ class Alerts(BasePage):
         assert html_alert_text == expected_text, f"Error: expected: {expected_text}, actual: {html_alert_text}"
 
     def close_html_alert(self):
+        self.driver.find_element(*self.HTML_ALERT_CLOSE).click()
 
 
 
