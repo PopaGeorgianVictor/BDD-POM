@@ -16,7 +16,7 @@ class Alerts(BasePage):
     def click_html_alert(self):
         self.driver.find_element(*self.HTML_ALERT).click()
 
-    def check_msg_html_alert(self):
+    def msg_html_alert(self):
         html_alert_text = self.driver.find_element(*self.HTML_ALERT_TEXT).text
         expected_text = "This is alert using just html."
         assert html_alert_text == expected_text, f"Error: expected: {expected_text}, actual: {html_alert_text}"
@@ -24,5 +24,10 @@ class Alerts(BasePage):
     def close_html_alert(self):
         self.driver.find_element(*self.HTML_ALERT_CLOSE).click()
 
-    def
+    def click_js_alert(self):
+        self.driver.find_element(*self.JS_ALERT).click()
+
+    def msg_js_alert(self):
+
+
 
