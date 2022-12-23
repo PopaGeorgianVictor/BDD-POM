@@ -23,3 +23,7 @@ def step_impl(context):
 @when("I click on  'Select GitHub Project' ")
 def step_impl(context):
     context.click_second_dropdown()
+
+@then("check_link")
+def step_impl(context):
+    context.check_link()
