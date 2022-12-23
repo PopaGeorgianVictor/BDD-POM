@@ -35,9 +35,6 @@ class Alerts(BasePage):
     def click_js_confirm_alert(self):
         self.driver.find_element(*self.JS_CONFIRM).click()
 
-    def js_confirm_accept_alert_click(self):
-
-
     def js_confirm_accept_alert(self):
         js_confirm = self.driver.switch_to.alert
         js_confirm.accept()
