@@ -22,9 +22,16 @@ Feature: Testing if Alerts, Confirm & Prompts working properly
     When : I click  on "OK" button
     Then : I am able to close this alert and message 'Great! You will love it!' is displayed
 
-      Scenario: Check if Confirm alert working and after I click 'Cancel' button, the messages are displayed accordingly
+   Scenario: Check if Confirm alert working and after I click 'Cancel' button, the messages are displayed accordingly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Confirm Alert' button
     Then : Is displayed an alert message , 'Do you like Selenium? 'Cancel' for No, 'Ok' for Yes.'
     When : I click  on "Cancel" button
     Then : I am able to close this alert and message 'Too bad!!! You would've loved it!' is displayed
+
+   Scenario: Check if Prompt alert working and after I click 'Cancel' button,  no message are showing
+    Given : I am on '/alert_confirm_prompt' homepage
+    When : I click on  'Show a Prompt' button
+    Then : Is displayed a input
+    When : I click  on "Cancel" button
+    Then : I am able to close this alert and no message are showing
