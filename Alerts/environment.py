@@ -1,4 +1,4 @@
-from Alerts.pages.dropdowns import Alerts
+from Alerts.pages.alerts import Alerts
 from browser import Browser
 
 def before_all(context):
