@@ -1,5 +1,5 @@
 from selenium.webdriver.common.by import By
-from Dropdown.pages.base_page import Base_page
+from Dropdown.pages.base_page import BasePage
 from selenium.webdriver.support.select import Select
 
 class Dropdown(BasePage):
@@ -11,10 +11,10 @@ class Dropdown(BasePage):
         self.driver.get()
 
     def click_first_dropdown(self):
-        self.driver.find_element(*self.DROPDOWN_CLASS).click()
+        self.driver.find_element(*self.FIRST_DROPDOWN).click()
 
     def display_all_options_first_dropdown(self):
-        dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
+        dropdown = self.driver.find_element(*self.FIRST_DROPDOWN)
         dropdown_object = Select(dropdown)
 
         all_options = dropdown_object.options
@@ -22,7 +22,7 @@ class Dropdown(BasePage):
             print(option.text)
 
     def select_first_dropdown(self):
-        dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
+        dropdown = self.driver.find_element(*self.FIRST_DROPDOWN)
         dropdown_object = Select(dropdown)
         dropdown_object.select_by_value('Python')
         dropdown_object.select_by_value('Java')
@@ -31,10 +31,10 @@ class Dropdown(BasePage):
         dropdown_object.select_by_value('SQL')
 
     def click_second_dropdown(self):
-        self.driver.find_element(*self.DROPDOWN_CLASS).click()
+        self.driver.find_element(*self. SECOND_DROPDOWN ).click()
 
     def display_all_options_second_dropdown(self):
-        dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
+        dropdown = self.driver.find_element(*self. SECOND_DROPDOWN )
         dropdown_object = Select(dropdown)
 
         all_options = dropdown_object.options
@@ -42,7 +42,7 @@ class Dropdown(BasePage):
             print(option.text)
 
     def select_second_dropdown(self):
-        dropdown = self.driver.find_element(*self.DROPDOWN_CLASS)
+        dropdown = self.driver.find_element(*self. SECOND_DROPDOWN)
         dropdown_object = Select(dropdown)
         dropdown_object.select_by_value('Python')
         dropdown_object.select_by_value('Java')
