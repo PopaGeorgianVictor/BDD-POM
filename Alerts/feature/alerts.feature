@@ -1,0 +1,1 @@
+Feature: Testing if Alerts, Confirm & Prompts working properly
