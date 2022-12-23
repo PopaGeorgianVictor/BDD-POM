@@ -9,9 +9,9 @@ class Alerts(BasePage):
     HTML_ALERT_CLOSE = (By.CSS_SELECTOR, ".btn-close")
     JS_ALERT = (By.CSS_SELECTOR, "#jsAlertExample button")
     JS_CONFIRM = (By.CSS_SELECTOR, "#jsConfirmExample button")
-    RS_MSG_CONFIRM = (By.ID, 'userResponse1')
+    RS_CONFIRM = (By.ID, 'userResponse1')
     JS_PROMPT = (By.CSS_SELECTOR, "#jsPromptExample button")
-    RS_MSG_PROMPT = (By.ID, 'userResponse2')
+    RS_PROMPT = (By.ID, 'userResponse2')
     INSERTED_TEXT = "test"
 
     def click_html_alert(self):
@@ -36,6 +36,7 @@ class Alerts(BasePage):
         self.driver.find_element(*self.JS_CONFIRM).click()
 
     def js_confirm_accept_alert(self):
+
 
 
 
