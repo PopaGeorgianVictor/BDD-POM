@@ -5,12 +5,12 @@ from Dropdown.pages.base_page import BasePage
 
 class Alerts(BasePage):
 
-    HTML_ALERT = (By.CSS_SELECTOR, "div#bootStrapAlertExample button")
+    HTML_ALERT = (By.CSS_SELECTOR, "#bootStrapAlertExample button")
     HTML_ALERT_TEXT = (By.ID, "bootStrapAlert")
     HTML_ALERT_CLOSE = (By.CSS_SELECTOR, ".btn-close")
-    JS_ALERT = (By.CSS_SELECTOR, "div#jsAlertExample button")
-    JS_CONFIRM = (By.CSS_SELECTOR, "div#jsConfirmExample button")
-    JS_PROMPT = (By.CSS_SELECTOR, "div#jsPromptExample button")
+    JS_ALERT = (By.CSS_SELECTOR, "#jsAlertExample button")
+    JS_CONFIRM = (By.CSS_SELECTOR, "#jsConfirmExample button")
+    JS_PROMPT = (By.CSS_SELECTOR, "#jsPromptExample button")
     INSERTED_TEXT = "test"
 
     def click_html_alert(self):
@@ -24,5 +24,5 @@ class Alerts(BasePage):
     def close_html_alert(self):
         self.driver.find_element(*self.HTML_ALERT_CLOSE).click()
 
-
+    def
 
