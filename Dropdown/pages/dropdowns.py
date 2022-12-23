@@ -36,6 +36,7 @@ class Dropdown(BasePage):
         self.driver.find_element(*self.SECOND_DROPDOWN).click()
 
     def check_link(self):
+        self.driver.find_element(*self.OPTION_DROPDOWN).click()
         time.sleep(3)
         driver.switch_to.window(driver.window_handles[1])
         print("Second window title = " + driver.title)
