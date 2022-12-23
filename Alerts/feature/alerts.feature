@@ -36,9 +36,17 @@ Feature: Testing if Alerts, Confirm & Prompts working properly
     When : I click  on "Cancel" button
     Then : I am able to close this alert and no message are showing
 
-   Scenario: Check if Prompt alert working and without I click 'OK' button without complete field,the messages are displayed accordingly
+   Scenario: Check if Prompt alert working and after I click 'OK' button without complete field,the messages are displayed accordingly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Prompt' button
     Then : Is displayed a input
     When : I click  on "OK" button
     Then : I am able to close this alert and "You have entered: none" message are showing
+
+   Scenario: Check if Prompt alert working and after I click 'OK' button with complete field,the messages are displayed accordingly
+    Given : I am on '/alert_confirm_prompt' homepage
+    When : I click on  'Show a Prompt' button
+    Then : Is displayed a input
+    When : I complete the field with 'test' message
+    When : I click  on "OK" button
+    Then : I am able to close this alert and "You have entered: test" message are showing
