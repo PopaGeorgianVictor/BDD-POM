@@ -1,6 +1,7 @@
 from selenium.webdriver.common.by import By
 from Dropdown.pages.base_page import BasePage
 from selenium.webdriver.support.select import Select
+from selenium.common import NoSuchElementException
 import time
 
 class Dropdown(BasePage):
@@ -38,7 +39,7 @@ class Dropdown(BasePage):
     def check_link(self):
         self.driver.find_element(*self.OPTION_DROPDOWN).click()
         time.sleep(3)
-        driver.switch_to.window(driver.window_handles[1])
+        self.driver.switch_to.window(self.driver.window_handles[1])
         print("Second window title = " + self.driver.title)
 
         try:
