@@ -19,34 +19,34 @@ Feature: Testing if Alerts, Confirm & Prompts working properly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Confirm Alert' button
     Then : Is displayed an alert message , 'Do you like Selenium? 'Cancel' for No, 'Ok' for Yes.'
-    When : I click  on "OK" button
+    When : I click  on 'OK' button
     Then : I am able to close this alert and message 'Great! You will love it!' is displayed
 
    Scenario: Check if Confirm alert working and after user click 'Cancel' button, the messages are displayed accordingly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Confirm Alert' button
     Then : Is displayed an alert message , 'Do you like Selenium? 'Cancel' for No, 'Ok' for Yes.'
-    When : I click  on "Cancel" button
+    When : I click  on 'Cancel' button
     Then : I am able to close this alert and message 'Too bad!!! You would've loved it!' is displayed
 
    Scenario: Check if Prompt alert working and after user click 'Cancel' button,  no message are showing
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Prompt' button
     Then : Is displayed a input
-    When : I click  on "Cancel" button
+    When : I click  on 'Cancel' button
     Then : I am able to close this alert and no message are showing
 
    Scenario: Check if Prompt alert working and after user click 'OK' button without complete field,the messages are displayed accordingly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Prompt' button
     Then : Is displayed a input
-    When : I click  on "OK" button
-    Then : I am able to close this alert and "You have entered: none" message are showing
+    When : I click  on 'OK' button
+    Then : I am able to close this alert and 'You have entered: none' message are showing
 
    Scenario: Check if Prompt alert working and after user click 'OK' button with complete field,the messages are displayed accordingly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show a Prompt' button
     Then : Is displayed a input
     When : I complete the field with 'test' message
-    When : I click  on "OK" button
-    Then : I am able to close this alert and "You have entered: test" message are showing
+    When : I click  on 'OK' button
+    Then : I am able to close this alert and 'You have entered: test' message are showing

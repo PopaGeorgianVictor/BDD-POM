@@ -35,3 +35,7 @@ def step_impl(context):
 @when("I click on  'Show a Confirm Alert' button")
 def step_impl(context):
     context.alert_object.click_js_confirm_alert()
+
+@when("I click on  'Cancel' button")
+def step_impl(context):
+    context.alert_object.click_js_confirm_alert()
