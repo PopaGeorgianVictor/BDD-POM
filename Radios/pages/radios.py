@@ -18,9 +18,9 @@ class Radio(BasePage):
         assert default_element.is_selected(), f"The default value of {expected_default_value} is not selected."
 
     def click_all_btn(self):
-        self.driver.find_element.click()
-        self.driver.find_element.click()
-        self.driver.find_element.click()
-        self.driver.find_element.click()
+        self.driver.find_element.(*self.BTN1).click()
+        self.driver.find_element.(*self.BTN2).click()
+        self.driver.find_element.(*self.BTN3).click()
+        self.driver.find_element.(*self.BTN4).click()
 
 
