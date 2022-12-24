@@ -51,3 +51,11 @@ def step_impl(context):
 @then("I am able to close this alert and message 'Too bad!!! You would've loved it!' is displayed")
 def step_impl(context):
     context.alert_object.js_confirm_cancel_alert_msg()
+
+@when("I click on  'Show a Prompt' button")
+def step_impl(context):
+    context.alert_object.click_js_prompt_alert()
+
+@when("I click  on 'Cancel' button")
+def step_impl(context):
+    context.alert_object.js_prompt_cancel_alert()
