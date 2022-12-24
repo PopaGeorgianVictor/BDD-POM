@@ -14,6 +14,9 @@ class Alerts(BasePage):
     RS_PROMPT = (By.ID, 'userResponse2')
     INSERTED_TEXT = "test"
 
+    def navigate_to_page(self):
+        self.driver.get()
+
     def click_html_alert(self):
         self.driver.find_element(*self.HTML_ALERT).click()
 
