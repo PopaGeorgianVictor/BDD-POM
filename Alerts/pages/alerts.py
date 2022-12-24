@@ -50,6 +50,10 @@ class Alerts(BasePage):
     def click_js_prompt_alert(self):
         self.driver.find_element(*self.JS_PROMPT).click()
 
+    def js_prompt_cancel_alert(self):
+        js_prompt = self.driver.switch_to.alert
+        js_prompt.dismiss()
+
     def
 
 
