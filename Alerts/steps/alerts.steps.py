@@ -18,4 +18,4 @@ def step_impl(context):
 
 @then("I am able to close this alert")
 def step_impl(context):
-    context.alert_object.close_html_alert()
+    context.alert_object.check_closed_alert()
