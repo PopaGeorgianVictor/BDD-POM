@@ -47,6 +47,10 @@ class Alerts(BasePage):
         rs_message = self.driver.find_element(*self.RS_CONFIRM).text
         assert rs_message == "Too bad!!! You would've loved it!", "Wrong message after canceling"
 
+    def click_js_prompt_alert(self):
+        self.driver.find_element(*self.JS_PROMPT).click()
+
+    def
 
 
 
