@@ -71,3 +71,7 @@ def step_impl(context):
 @then("I am able to close this alert and 'You have entered: none' message are showing")
 def step_impl(context):
     context.alert_object.js_screenshot_accept_prompt_without_text()
+
+@when("I complete the field with 'test' message")
+def step_impl(context):
+    context.alert_object.js_prompt_accept_alert_with_text()
