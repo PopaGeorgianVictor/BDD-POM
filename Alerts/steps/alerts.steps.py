@@ -76,3 +76,10 @@ def step_impl(context):
 def step_impl(context):
     context.alert_object.js_prompt_insert_text()
 
+@when("I click  on 'OK' button")
+def step_impl(context):
+    context.alert_object.js_prompt_insert_text()
+
+@then(" I am able to close this alert and 'You have entered: test' message are showing")
+def step_impl(context):
+    context.alert_object.js_screenshot_accept_prompt_with_text()
