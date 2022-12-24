@@ -59,3 +59,4 @@ def step_impl(context):
 @when("I click  on 'Cancel' button")
 def step_impl(context):
     context.alert_object.js_prompt_cancel_alert()
+

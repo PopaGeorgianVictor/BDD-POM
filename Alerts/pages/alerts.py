@@ -73,6 +73,9 @@ class Alerts(BasePage):
         js_prompt = self.driver.switch_to.alert
         js_prompt.dismiss()
 
+    def js_screenshot_cancel_prompt(self):
+        self.driver.get_screenshot_as_file('screenshot_cancel_prompt.png')
+
     def test_js_prompt_accept_alert_without_text(self):
         js_prompt = self.driver.switch_to.alert
         js_prompt.accept()
