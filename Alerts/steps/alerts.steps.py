@@ -36,6 +36,14 @@ def step_impl(context):
 def step_impl(context):
     context.alert_object.click_js_confirm_alert()
 
+@when("I click  on 'OK' button")
+def step_impl(context):
+    context.alert_object. js_confirm_accept_alert()
+
+@then("I am able to close this alert and message 'Great! You will love it!' is displayed")
+def step_impl(context):
+    context.alert_object.js_confirm_accept_alert_msg()
+
 @when("I click on  'Cancel' button")
 def step_impl(context):
     context.alert_object. js_confirm_cancel_alert()

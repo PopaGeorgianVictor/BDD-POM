@@ -53,6 +53,8 @@ class Alerts(BasePage):
     def js_confirm_accept_alert(self):
         js_confirm = self.driver.switch_to.alert
         js_confirm.accept()
+
+    def js_confirm_accept_alert_msg(self):
         rs_message = self.driver.find_element(*self.RS_CONFIRM).text
         assert rs_message == 'Great! You will love it!', "Wrong message after accepting"
 
