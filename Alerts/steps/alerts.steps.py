@@ -11,3 +11,7 @@ def step_impl(context):
 @then("Is displayed an alert message , 'This is alert using just html.'")
 def step_impl(context):
     context.alert_object.msg_html_alert()
+
+@when("I click on close icon , 'X'")
+def step_impl(context):
+    context.alert_object.close_html_alert()
