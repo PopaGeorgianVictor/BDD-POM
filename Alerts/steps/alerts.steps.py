@@ -24,6 +24,6 @@ def step_impl(context):
 def step_impl(context):
     context.alert_object.click_js_alert()
 
-@then("Is displayed an alert message , 'I am a JavaScript Alert'")
+@when("I click  on 'OK' button")
 def step_impl(context):
-    context.alert_object.check_closed_alert()
+    context.alert_object.js_alert_accept()
