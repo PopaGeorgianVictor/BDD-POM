@@ -74,11 +74,11 @@ def step_impl(context):
 
 @when("I complete the field with 'test' message")
 def step_impl(context):
-    context.alert_object.js_prompt_insert_text()
+    context.alert_object.js_prompt_insert_text_accept()
 
 @when("I click  on 'OK' button")
 def step_impl(context):
-    context.alert_object.js_prompt_insert_text()
+    context.alert_object.js_prompt_insert_text_accept()
 
 @then(" I am able to close this alert and 'You have entered: test' message are showing")
 def step_impl(context):
