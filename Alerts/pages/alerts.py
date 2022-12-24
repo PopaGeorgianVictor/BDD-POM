@@ -44,6 +44,9 @@ class Alerts(BasePage):
         js_alert = self.driver.switch_to.alert
         js_alert.accept()
 
+    def js_screenshot_accept_alert(self):
+        self.driver.get_screenshot_as_file('screenshot_accept_alert.png')
+
     def click_js_confirm_alert(self):
         self.driver.find_element(*self.JS_CONFIRM).click()
 

@@ -27,3 +27,7 @@ def step_impl(context):
 @when("I click  on 'OK' button")
 def step_impl(context):
     context.alert_object.js_alert_accept()
+
+@then("I am able to close this alert")
+def step_impl(context):
+    context.alert_object.js_screenshot_accept_alert()
