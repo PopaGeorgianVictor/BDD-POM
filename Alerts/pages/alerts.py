@@ -76,14 +76,16 @@ class Alerts(BasePage):
     def js_screenshot_cancel_prompt(self):
         self.driver.get_screenshot_as_file('screenshot_cancel_prompt.png')
 
-    def test_js_prompt_accept_alert_without_text(self):
+    def js_prompt_accept_alert_without_text(self):
         js_prompt = self.driver.switch_to.alert
         js_prompt.accept()
+
+    def js_screenshot_accept_prompt_without_text(self):
         rs_message = self.driver.find_element(*self.RS_PROMPT).text
         expected_text = f"You have entered: none"
         assert rs_message == expected_text, f"Error: expected: {expected_text}, actual: {rs_message}"
 
-    def test_js_prompt_accept_alert_with_text(self):
+    def js_prompt_accept_alert_with_text(self):
         js_prompt = self.driver.switch_to.alert
         js_prompt.send_keys(self.INSERTED_TEXT)
         js_prompt.accept()
