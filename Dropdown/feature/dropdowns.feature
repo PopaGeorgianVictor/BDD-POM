@@ -1,4 +1,4 @@
-Feature:Testing if the dropdowns work and if I can selected options and accesing links
+Feature:Testing if the dropdowns working properly and if I can selected options and accesing links
 
   Scenario: Check that the user can have access on dropdown menu 1
     Given : I am on '/dropdown' homepage
