@@ -74,4 +74,5 @@ def step_impl(context):
 
 @when("I complete the field with 'test' message")
 def step_impl(context):
-    context.alert_object.js_prompt_accept_alert_with_text()
+    context.alert_object.js_prompt_insert_text()
+

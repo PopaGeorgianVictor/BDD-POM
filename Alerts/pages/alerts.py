@@ -85,9 +85,11 @@ class Alerts(BasePage):
         expected_text = f"You have entered: none"
         assert rs_message == expected_text, f"Error: expected: {expected_text}, actual: {rs_message}"
 
-    def js_prompt_accept_alert_with_text(self):
+    def js_prompt_insert_text(self):
         js_prompt = self.driver.switch_to.alert
         js_prompt.send_keys(self.INSERTED_TEXT)
+
+    def
         js_prompt.accept()
         rs_message = self.driver.find_element(*self.RS_PROMPT).text
         expected_text = f"You have entered: {self.INSERTED_TEXT}"
