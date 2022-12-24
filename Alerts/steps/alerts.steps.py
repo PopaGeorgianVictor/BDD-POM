@@ -60,3 +60,6 @@ def step_impl(context):
 def step_impl(context):
     context.alert_object.js_prompt_cancel_alert()
 
+@then("I am able to close this alert and no message are showing")
+def step_impl(context):
+    context.alert_object.js_screenshot_cancel_prompt()
