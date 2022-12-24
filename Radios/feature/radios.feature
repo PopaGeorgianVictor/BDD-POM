@@ -1,4 +1,4 @@
-Feature: Testing if Radios Buttons working properly
+Feature: Testing if Radio Buttons working properly
 
    Scenario: Check if default button is selected
     Given : I am on '/radio_btn' page
@@ -9,3 +9,6 @@ Feature: Testing if Radios Buttons working properly
     When : I select radio buttons one by one
     Then : I can select any button
 
+   Scenario: Verify number of radio buttons
+    Given : I am on '/radio_btn' page
+    Then : Number of radio buttons is as expected
