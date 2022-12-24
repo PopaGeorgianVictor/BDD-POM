@@ -29,12 +29,14 @@ class Alerts(BasePage):
     def close_html_alert(self):
         self.driver.find_element(*self.HTML_ALERT_CLOSE).click()
 
+    def check_closed_alert(self):
         try:
             self.driver.find_element(*self.HTML_ALERT_CLOSE)
             print('Element still exist')
 
         except NoSuchElementException:
             print("Element does not exist, closed successfully")
+
 
     def click_js_alert(self):
         self.driver.find_element(*self.JS_ALERT).click()
