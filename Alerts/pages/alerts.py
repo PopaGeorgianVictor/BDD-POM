@@ -59,6 +59,8 @@ class Alerts(BasePage):
     def js_confirm_cancel_alert(self):
         js_confirm = self.driver.switch_to.alert
         js_confirm.dismiss()
+
+    def js_confirm_cancel_alert_msg(self):
         rs_message = self.driver.find_element(*self.RS_CONFIRM).text
         assert rs_message == "Too bad!!! You would've loved it!", "Wrong message after canceling"
 

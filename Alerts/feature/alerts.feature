@@ -12,7 +12,7 @@ Feature: Testing if Alerts, Confirm & Prompts working properly
     Given : I am on '/alert_confirm_prompt' homepage
     When : I click on  'Show JavaScript Alert' button
     Then : Is displayed an alert message , 'I am a JavaScript Alert'
-    When : I click  on "OK" button
+    When : I click  on 'OK' button
     Then : I am able to close this alert
 
    Scenario: Check if Confirm alert working and after user click 'OK' button, the messages are displayed accordingly
