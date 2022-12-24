@@ -4,3 +4,8 @@ Feature: Testing if Radios Buttons working properly
     Given : I am on '/radio_btn' page
     Then : 'Rock FM' button is selected by default
 
+   Scenario: Check if all button are selectable
+    Given : I am on '/radio_btn' page
+    When : I select radio buttons one by one
+    Then : I can select any button
+
