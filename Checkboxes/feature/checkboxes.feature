@@ -1,6 +1,5 @@
 Feature: Testing if Checkboxes working properly
 
-
    Scenario: Check that the user can select one checkbox
     Given : I am on '/checkbox' page
     When : I select one checkbox
