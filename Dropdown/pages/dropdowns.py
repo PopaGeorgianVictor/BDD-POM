@@ -9,6 +9,7 @@ class Dropdown(BasePage):
     FIRST_DROPDOWN = (By.ID, 'coding-language-select')
     SECOND_DROPDOWN = (By.ID, "dropdownMenuButton")
     OPTION_DROPDOWN = (By.LINK_TEXT, "OVERVIEW")
+    ELEM =(By.CSS_SELECTOR, "span[title='PORTOFOLIO']")
 
     def navigate_to_page(self):
         self.driver.get()
@@ -43,7 +44,7 @@ class Dropdown(BasePage):
         print("Second window title = " + self.driver.title)
 
         try:
-            self.driver.find_element(By.CSS_SELECTOR, "span[title='PORTOFOLIO']")
+            self.driver.find_element(*self.ELEM)
             print('Element exist')
 
         except NoSuchElementException:
