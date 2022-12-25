@@ -7,6 +7,9 @@ class Search(BasePage):
     SEARCH_BAR = (By.ID, "myInput")
     ELEM = (By.LINK_TEXT, "LISTS")
 
+    def navigate_to_page(self):
+        self.driver.get()
+
     def search_for_elem(self):
         self.driver.find_element(*self.SEARCH_BAR).send_keys('lists')
         elem = self.driver.find_element(*self.ELEM)
