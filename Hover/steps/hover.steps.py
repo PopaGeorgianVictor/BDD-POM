@@ -14,7 +14,7 @@ def step_impl(context):
 
 @when("I click on 'Portofolio'")
 def step_impl(context):
-    context.hover_object.hovering()
+    context.hover_object.click()
 
 @then("A new link are opened")
 def step_impl(context):
