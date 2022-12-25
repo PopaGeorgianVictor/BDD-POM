@@ -1,4 +1,4 @@
-Feature: Testing search function working properly
+Feature: Testing if search function working properly
 
    Scenario: Check that the user can search for specific element
     Given : I am on '/search_bar' page
