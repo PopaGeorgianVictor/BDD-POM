@@ -1,4 +1,4 @@
-from Checkboxes.pages.alerts import Checkbox
+from Checkboxes.pages.checkboxes import Checkbox
 from browser import Browser
 
 def before_all(context):
