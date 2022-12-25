@@ -1,7 +1,7 @@
 Feature: Testing if Radio Buttons working properly
 
-   Scenario: Check if default button is selected
-    Given : I am on '/radio_btn' page
+   Scenario: Check if default buttonI am on '/radio_btn' page is selected
+    Given :
     Then : 'Rock FM' button is selected by default
 
    Scenario: Check if all button are selectable

@@ -1,6 +1,6 @@
 from behave import *
 
-@given("I am on '/dropdown' homepage")
+@given("I am on '/dropdown' page")
 def step_impl(context):
     context.dropdown_object.navigate_to_page()
 
