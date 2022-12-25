@@ -11,15 +11,18 @@ class Checkbox(BasePage):
     def navigate_to_page(self):
         self.driver.get()
 
+    def check_number_checkbokes(self):
+        expected_number_of_options = 4
+        all_ch = self.driver.find_elements(*self.ALL_CHECKBOXES)
+        assert len(all_ch) == expected_number_of_options, "Number of checkboxes is not the expected"
+
     def select_one_checkbox(self):
         selected_ch =  self.driver.find_element(*self.MY_CHOICE)
         selected_ch.click()
         assert selected_ch.is_selected(), f"After clicking value {TO_SELECT_VALUE} it is not selected."
 
-    def select_all_checkbokes(self):
-        expected_number_of_options = 4
+    def select_all_chekboxes(self):
         all_ch = self.driver.find_elements(*self.ALL_CHECKBOXES)
-        assert len(all_ch) == expected_number_of_options, "Number of checkboxes is not the expected"
         for checkbox in all_ch:
             checkbox.click()
             value = checkbox.get_attribute('value')
