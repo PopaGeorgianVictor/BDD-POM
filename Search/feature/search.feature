@@ -8,5 +8,5 @@ Feature: Testing search function working properly
 
    Scenario: Check that the user can acces links
     Given : I am on '/search_bar' page
-    When : I click on 'LISTS"
+    When : I click on 'LISTS'
     Then : A new link are opened

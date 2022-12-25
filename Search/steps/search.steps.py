@@ -11,3 +11,7 @@ def step_impl(context):
 @then("Specific results are displayed")
 def step_impl(context):
     context.search_object.search_for_elem()
+
+@when("I click on 'LISTS'")
+def step_impl(context):
+    context.search_object.click_on_elem()
