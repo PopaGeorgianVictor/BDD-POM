@@ -1,4 +1,4 @@
-from Dropdown.pages.base_page import BasePage
+from Search.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.common import NoSuchElementException
 

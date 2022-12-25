@@ -1,12 +1,12 @@
-from selenium.common import NoSuchElementException
+import time
 from selenium.webdriver import ActionChains
+from Search.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
-from selenium import webdriver
-from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.firefox.service import Service
+from selenium.common import NoSuchElementException
 
-class Hover(unittest.TestCase):
-    MENU = (By.CSS_SELECTOR,"#container a")
+class Hover(BasePage):
+
+    MENU = (By.CSS_SELECTOR, "#container a")
     PORTOFOLIO = (By.LINK_TEXT, "Portofolio")
     ELEM = (By.LINK_TEXT, "PORTOFOLIO")
 
@@ -14,5 +14,16 @@ class Hover(unittest.TestCase):
         menu = self.driver.find_element(*self.MENU)
         action = ActionChains(self.driver)
         action.move_to_element(menu).perform()
-        link = self.driver.find_element(*self.PORTOFOLIO)
-        action.move_to_element(link).click().perform()
+
+    def click(self):
+        self.driver.find_element(*self.PORTOFOLIO).click()
+        time.sleep(3)
+        self.driver.switch_to.window(self.driver.window_handles[1])
+        print("Second window title = " + self.driver.title)
+
+        try:
+            self.driver.find_element(*self.ELEM)
+            print('Element exist')
+
+        except NoSuchElementException:
+            print("Element does not exist")
