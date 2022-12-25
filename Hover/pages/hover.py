@@ -10,6 +10,9 @@ class Hover(BasePage):
     PORTOFOLIO = (By.LINK_TEXT, "Portofolio")
     ELEM = (By.LINK_TEXT, "PORTOFOLIO")
 
+    def navigate_to_page(self):
+        self.driver.get()
+
     def hovering(self):
         menu = self.driver.find_element(*self.MENU)
         action = ActionChains(self.driver)
