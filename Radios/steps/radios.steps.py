@@ -8,7 +8,7 @@ def step_impl(context):
 def step_impl(context):
     context.dropdown_object.default_is_selected()
 
-@given("I select radio buttons one by one")
+@when("I select radio buttons one by one")
 def step_impl(context):
     context.dropdown_object.click_all_btn()
 
@@ -16,3 +16,6 @@ def step_impl(context):
 def step_impl(context):
     context.dropdown_object.click_all_btn()
 
+@then("Number of radio buttons is as expected")
+def step_impl(context):
+    context.dropdown_object.verify_number_of_radio_btn()
