@@ -16,3 +16,7 @@ def step_impl(context):
 @then("I can select that particular checkbox")
 def step_impl(context):
     context.checkboxes_object.select_one_checkbox()
+
+@when("I select checkboxes one by one")
+def step_impl(context):
+    context.checkboxes_object.select_all_chekboxes()
