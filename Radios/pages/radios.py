@@ -42,6 +42,11 @@ class Radio(BasePage):
         except WebDriverException:
             print("Rock FM button is not clickable")
 
-
+    def verify_number_of_radio_btn(self):
+        expected_values = ['magic fm', 'radio galaxy', 'europa fm', 'rock fm']
+        all_radios = self.driver.find_elements(*self.RADIOS)
+        assert len(all_radios) == len(expected_values), "the number of radios does not match the expected." \
+                                                        "Expected: {}, Actual: {}".format(len(expected_values),
+                                                                                          len(all_radios))
 
 
