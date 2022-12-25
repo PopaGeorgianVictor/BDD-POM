@@ -11,6 +11,9 @@ class Radio(BasePage):
     BTN3 = (By.CSS_SELECTOR, "input[value='europa fm']")
     BTN4 = (By.CSS_SELECTOR, "input[value='rock fm']")
 
+    def navigate_to_page(self):
+        self.driver.get()
+
     def default_is_selected(self):
         expected_default_value = 'rock fm'
         default_element = self.driver.find_element(By.CSS_SELECTOR,
