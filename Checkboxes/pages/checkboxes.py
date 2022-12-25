@@ -15,3 +15,15 @@ class Checkbox(BasePage):
         selected_ch =  self.driver.find_element(*self.MY_CHOICE)
         selected_ch.click()
         assert selected_ch.is_selected(), f"After clicking value {TO_SELECT_VALUE} it is not selected."
+
+    def select_all_checkbokes(self):
+        expected_number_of_options = 4
+        all_ch = self.driver.find_elements(*self.ALL_CHECKBOXES)
+        assert len(all_ch) == expected_number_of_options, "Number of checkboxes is not the expected"
+        for checkbox in all_ch:
+            checkbox.click()
+            value = checkbox.get_attribute('value')
+            if checkbox.is_selected():
+                print(f"Checkbox with value '{value}' is selectable")
+            else:
+                raise Exception(f"Value '{value}' is not selectable")
