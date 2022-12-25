@@ -1,14 +1,12 @@
 Feature: Testing if Checkboxes working properly
 
-   Scenario: Check if default button is selected
-    Given : I am on '/radio_btn' page
-    Then : 'Rock FM' button is selected by default
 
-   Scenario: Check if all button are selectable
-    Given : I am on '/radio_btn' page
-    When : I select radio buttons one by one
-    Then : I can select any button
+   Scenario: Check that the user can select one checkbox
+    Given : I am on '/checkbox' page
+    When : I select one checkbox
+    Then : I can select that particular checkbox
 
-   Scenario: Verify number of radio buttons
-    Given : I am on '/radio_btn' page
-    Then : Number of radio buttons is as expected
+   Scenario: Check that the user can select all checkboxes
+    Given : I am on '/checkbox' page
+    When : I select checkboxes one by one
+    Then : I can select all checkboxes
