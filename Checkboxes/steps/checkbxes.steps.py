@@ -20,3 +20,7 @@ def step_impl(context):
 @when("I select checkboxes one by one")
 def step_impl(context):
     context.checkboxes_object.select_all_chekboxes()
+
+@then("I can select all checkboxes")
+def step_impl(context):
+    context.checkboxes_object.select_all_chekboxes()
