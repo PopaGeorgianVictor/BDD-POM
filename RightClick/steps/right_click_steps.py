@@ -15,3 +15,7 @@ def step_impl(context):
 @when("I click on option from menu")
 def step_impl(context):
     context.right_click_object.click_on_option()
+
+@then("A new link with related results are opened")
+def step_impl(context):
+    context.right_click_object.open_link()

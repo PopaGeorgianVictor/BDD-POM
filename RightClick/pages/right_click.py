@@ -21,6 +21,8 @@ class RightClick(BasePage):
 
     def click_on_option(self):
         self.driver.find_element(*self.CLICK).click()
+
+    def open_link(self):
         time.sleep(3)
         self.driver.switch_to.window(self.driver.window_handles[1])
         print("Second window title = " + self.driver.title)
