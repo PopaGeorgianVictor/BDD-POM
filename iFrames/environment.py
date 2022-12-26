@@ -1,4 +1,4 @@
-from iFrames.pages.right_click import iFrames
+from iFrames.pages.iFrames import iFrames
 from browser import Browser
 
 def before_all(context):

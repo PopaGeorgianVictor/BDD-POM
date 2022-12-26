@@ -9,3 +9,6 @@ class iFrames(BasePage)
     WITHOUT_FRAME = (By.ID, 'btnOutFrame')
     OF_FRAME = (By.CSS_SELECTOR, "div[id='link'] li:nth-child(1) a:nth-child(1)")
     FRAMES = (By.TAG_NAME, 'iframe')
+
+
+
