@@ -19,3 +19,4 @@ def step_impl(context):
 @then("I can make actions inside iFrame")
 def step_impl(context):
     context.iframes_object.action_inside_frame()
+
