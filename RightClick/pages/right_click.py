@@ -15,6 +15,9 @@ class RightClick(BasePage):
         self.driver.find_element(*self.CLICK).click()
         print('I clicked on OVERVIEW')
 
+    def menu_option(self):
+        self.driver.get_screenshot_as_file('right_menu.png')
+
     def click_on_option(self):
         time.sleep(3)
         self.driver.switch_to.window(self.driver.window_handles[1])
