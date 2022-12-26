@@ -15,3 +15,7 @@ def step_impl(context):
 @when("I click on inside frames button")
 def step_impl(context):
     context.iframes_object.click_inside_iFrame()
+
+@then("I can make actions inside iFrame")
+def step_impl(context):
+    context.iframes_object.action_inside_frame()
