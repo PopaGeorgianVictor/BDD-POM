@@ -13,7 +13,7 @@ class Frames(BasePage):
     def navigate_to_page(self):
         self.driver.get()
 
-    def test_len_frames(self):
+    def len_frames(self):
         frames = self.driver.find_elements(*self.FRAMES)
         for frame in frames:
             print(frame.get_attribute("id"))
