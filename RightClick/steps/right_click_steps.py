@@ -10,5 +10,8 @@ def step_impl(context):
 
 @then("A right click menu opened")
 def step_impl(context):
-        context.right_click_object.menu_option()
+    context.right_click_object.menu_option()
 
+@when("I click on option from menu")
+def step_impl(context):
+    context.right_click_object.click_on_option()
