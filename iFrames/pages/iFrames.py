@@ -22,10 +22,12 @@ class Frames(BasePage):
         assert alert.text == 'Just Clicked Outside iFrame', "Should've gotten outside message"
         alert.accept()
 
-    def inside_iFrame(self):
+    def click_inside_iFrame(self):
         self.driver.switch_to.frame('myFrame1')
         self.driver.find_element(*self.OF_FRAME).click()
         print('I clicked in frame')
+
+    def action_inside_frame(self):
         time.sleep(3)
         print("Second window title = " + self.driver.title)
 
