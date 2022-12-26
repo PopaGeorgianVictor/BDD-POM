@@ -10,3 +10,7 @@ Feature: Testing if iFrames working properly
     Given : I am on '/iFrame' page
     When : I click on inside frames button
     Then :I can make actions inside iFrame
+
+   Scenario: Check how many frames are in page
+    Given : I am on '/iFrame' page
+    Then :I can see how many frames is in page
