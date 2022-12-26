@@ -1,5 +1,5 @@
 from behave import *
 
-@given("I am on '/radio_btn' page")
+@given("I am on '/right_click_menu' page")
 def step_impl(context):
-    context.dropdown_object.navigate_to_page()
+    context.radios_object.navigate_to_page()
