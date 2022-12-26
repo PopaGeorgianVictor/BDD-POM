@@ -10,5 +10,6 @@ class iFrames(BasePage)
     OF_FRAME = (By.CSS_SELECTOR, "div[id='link'] li:nth-child(1) a:nth-child(1)")
     FRAMES = (By.TAG_NAME, 'iframe')
 
-
+    def navigate_to_page(self):
+        self.driver.get()
 
