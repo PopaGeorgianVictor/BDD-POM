@@ -1,4 +1,4 @@
-from Dropdown.browser import Browser
+from Radios.browser import Browser
 
 class BasePage(Browser):
     pass
