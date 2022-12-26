@@ -18,4 +18,4 @@ def step_impl(context):
 
 @then("A new link are opened")
 def step_impl(context):
-    context.hover_object.click()
+    context.hover_object.open_link()

@@ -20,6 +20,8 @@ class Hover(BasePage):
 
     def click(self):
         self.driver.find_element(*self.PORTOFOLIO).click()
+
+    def open_link(self):
         time.sleep(3)
         self.driver.switch_to.window(self.driver.window_handles[1])
         print("Second window title = " + self.driver.title)
