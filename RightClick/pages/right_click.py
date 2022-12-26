@@ -10,6 +10,9 @@ class RightClick(BasePage):
     CLICK = (By.CSS_SELECTOR, "#contextMenu a")
     ELEM = (By.LINK_TEXT, 'PORTOFOLIO')
 
+    def navigate_to_page(self):
+        self.driver.get()
+
     def right_click(self):
         ActionChains(self.driver).context_click().perform()
 
