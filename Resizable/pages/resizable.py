@@ -6,5 +6,6 @@ class Resize(BasePage):
 
     RESIZE = (By.XPATH, '//*[@id="resizable"]/div[3]')
 
-
+    def navigate_to_page(self):
+        self.driver.get()
 
