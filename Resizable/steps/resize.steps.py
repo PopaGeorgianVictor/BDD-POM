@@ -7,3 +7,7 @@ def step_impl(context):
 @when("I pull the edges element for resize")
 def step_impl(context):
     context.resize_object.resizable()
+
+@then("I can resize the element")
+def step_impl(context):
+    context.resize_object.check_resize()
