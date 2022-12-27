@@ -11,3 +11,11 @@ def step_impl(context):
 @then("I can resize the element")
 def step_impl(context):
     context.resize_object.check_resize()
+
+@when("I tight the element for resize back")
+def step_impl(context):
+    context.resize_object.resize_back()
+
+@then("I can resize back the element")
+def step_impl(context):
+    context.resize_object.check_resize_back()
