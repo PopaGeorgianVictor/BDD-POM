@@ -5,6 +5,7 @@ from selenium.webdriver import ActionChains
 class Resize(BasePage):
 
     RESIZE = (By.XPATH, '//*[@id="resizable"]/div[3]')
+    ELEM_RESIZABLE = (By.ID, 'resizable')
 
     def navigate_to_page(self):
         self.driver.get()
