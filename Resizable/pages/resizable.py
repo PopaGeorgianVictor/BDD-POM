@@ -13,7 +13,12 @@ class Resize(BasePage):
     def resizable(self):
         ActionChains(self.driver).drag_and_drop_by_offset(self.driver.find_element(*self.RESIZE), 500, 500).perform()
 
+    def check_resize(self):
+        elem = self.driver.find_element(*self.ELEM_RESIZABLE)
+        expected_size = {'height': 619, 'width': 619}
+        actual_size = elem.size
+        assert expected_size == actual_size, f"Error: expected: {expected_size}, actual: {actual_size}"
+
     def resize_back(self):
         ActionChains(self.driver).drag_and_drop_by_offset(self.driver.find_element(*self.RESIZE), -500, -500).perform()
 
-    def check_resize(self):
