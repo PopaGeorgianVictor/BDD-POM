@@ -13,8 +13,6 @@ class Resize(BasePage):
     def resizable(self):
         ActionChains(self.driver).drag_and_drop_by_offset(self.driver.find_element(*self.RESIZE), 500, 500).perform()
 
-
-
     def resize_back(self):
         ActionChains(self.driver).drag_and_drop_by_offset(self.driver.find_element(*self.RESIZE), -500, -500).perform()
 
