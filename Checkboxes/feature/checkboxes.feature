@@ -1,7 +1,7 @@
 Feature: Testing if Checkboxes working properly
 
  Background:
-  Given : I am on '/alert_confirm_prompt' page
+  Given : I am on '/checkbox' page
 
    Scenario: Verify number of checkboxes
 
