@@ -9,7 +9,6 @@ Feature:Testing if the dropdowns working properly and if I can selected options 
     When : I select options one by one from dropdown
     Then : I can select any option from dropdown
 
-
   Scenario: Check that the user can have access on dropdown menu 2
     When : I click on  'Select GitHub Project'
     Then : A dropdown menu opens with related options
