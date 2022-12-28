@@ -1,4 +1,5 @@
 Feature: Testing if search function working properly
+
     Background:
    Given : I am on '/search_bar' page
 
