@@ -1,6 +1,5 @@
 Feature: Testing if mouse hover function working properly
 
-
    Scenario: Check that the user can make hover and acces links
     Given : I am on '/PRESENTATION-SITE/' page
     When : I hovering after 'OVERVIEW' menu
