@@ -9,7 +9,11 @@ Feature:Testing if user can register on site
        When : I click on Register button
        Then : Register was successful
 
-     Scenario: Check if alert email adress message appears
+     Scenario: Check if error email adress message appears
        When : I complete Email address field with an already registered address
        When : I click on Register button
        Then : I got the error message "Error: An account is already registered with your email address. Please log in."
+
+      Scenario: Check "hint" password
+        When : I complete password field but without respecting the security requirements
+        Then : A hint for my password is displayed "Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & )."
