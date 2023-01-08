@@ -3,6 +3,9 @@ from selenium.webdriver.common.by import By
 
 class Login(BasePage):
 
+    EMAIL = (By.ID, "reg_email")
+    PASSWORD = (By.ID, "reg_password")
+
 
 
 
