@@ -9,6 +9,11 @@ Feature:Testing if user can register on site
        When : I click on Register button
        Then : Register was successful
 
+     Scenario: Check if invalid Email address error message appears
+       When : I complete Email address field with a wrong address format
+       When : I click on Register button
+       Then : I got the error message "Error: Please provide a valid email address. "
+
      Scenario: Check if already registered address error message appears
        When : I complete Email address field with an already registered address
        When : I click on Register button
