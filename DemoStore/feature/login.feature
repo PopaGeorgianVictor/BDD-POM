@@ -20,7 +20,7 @@ Feature:Testing if user can login on site
        Then : I got the error message "Error: The password field is empty."
 
      Scenario: Check if wrong password error message appears
-       When : I complete Username or email address field
+       When : I complete Username or email address field with test@email.com
        When : I entered a wrong password for the inserted username
        When : I click on Log in button
-       Then : I got the error message "Error: The password you entered for the username sadas is incorrect. Lost your password?"
+       Then : I got the error message "Error: The password you entered for the username test@email.com is incorrect. Lost your password?"
