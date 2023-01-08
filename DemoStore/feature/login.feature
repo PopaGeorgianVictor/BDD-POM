@@ -9,3 +9,7 @@ Feature:Testing if user can login on site
        When : I select checkbox  Remember me
        When : I click on Log in button
        Then : I am able to log in
+
+     Scenario: Check if empty field error message appears
+       When : I click on Log in button
+       Then : I got the error message "Error: Username is required."
