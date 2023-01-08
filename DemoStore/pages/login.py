@@ -14,3 +14,5 @@ class Login(BasePage):
     def insert_email(self):
         self.driver.find_element(*self.EMAIL).send_keys("test123@gmail.com")
 
+    def insert_password(self):
+        self.driver.find_element(*self.PASSWORD).send_keys("6KTPNqcwUAe7PAD")
