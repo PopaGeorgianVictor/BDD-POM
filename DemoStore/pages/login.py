@@ -11,4 +11,6 @@ class Login(BasePage):
     def navigate_to_page(self):
         self.driver.get("http://demostore.supersqa.com/my-account/")
 
+    def insert_email(self):
+        self.driver.find_element(*self.EMAIL).send_keys("test123@gmail.com")
 
