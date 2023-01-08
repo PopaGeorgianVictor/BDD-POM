@@ -13,3 +13,8 @@ Feature:Testing if user can login on site
      Scenario: Check if empty field error message appears
        When : I click on Log in button
        Then : I got the error message "Error: Username is required."
+
+     Scenario: Check if empty password field error message appears
+       When : I complete Email address field
+       When : I click on Log in button
+       Then : I got the error message "Error:  The password field is empty."
