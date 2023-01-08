@@ -7,7 +7,7 @@ class Login(BasePage):
     PASSWORD = (By.ID, "reg_password")
     REGISTER_BTN = (By.NAME, "register")
     ERROR_TEXT = (By.XPATH,"//div[@id='content']//li[1]")
-    DASHBOARD = ()
+    DASHBOARD = (By.LINK_TEXT, "Dashboard")
     PASSWORD_HINT = ()
 
     def navigate_to_page(self):
