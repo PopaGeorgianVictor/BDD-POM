@@ -4,9 +4,9 @@ from selenium.webdriver.firefox.service import Service
 
 class Browser:
     driver = webdriver.Chrome(service=Service(GeckoDriverManager().install()))
-    driver.get("http://demostore.supersqa.com")
     driver.maximize_window()
     driver.implicitly_wait(3)
+    driver.set_page_load_timeout(10)
 
    def close(self):
        self.driver.delete_all_cookies()
