@@ -8,6 +8,7 @@ class Login(BasePage):
     REGISTER_BTN = (By.NAME, "register")
     ERROR_TEXT = (By.XPATH,"//div[@id='content']//li[1]")
 
-
+    def navigate_to_page(self):
+        self.driver.get("http://demostore.supersqa.com/my-account/")
 
 
