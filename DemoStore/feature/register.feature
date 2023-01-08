@@ -12,12 +12,12 @@ Feature:Testing if user can register on site
      Scenario: Check if invalid Email address error message appears
        When : I complete Email address field with a wrong address format
        When : I click on Register button
-       Then : I got the error message "Error: Please provide a valid email address. "
+       Then : I got the error message "Please provide a valid email address"
 
      Scenario: Check if already registered address error message appears
        When : I complete Email address field with an already registered address
        When : I click on Register button
-       Then : I got the error message "Error: An account is already registered with your email address. Please log in."
+       Then : I got the error message "An account is already registered with your email address."
 
       Scenario: Check "hint" password
         When : I complete password field but without respecting the security requirements
