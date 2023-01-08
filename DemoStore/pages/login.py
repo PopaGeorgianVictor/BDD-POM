@@ -16,3 +16,6 @@ class Login(BasePage):
 
     def insert_password(self):
         self.driver.find_element(*self.PASSWORD).send_keys("6KTPNqcwUAe7PAD")
+
+    def click_on_register(self):
+        self.driver.find_element(*self.REGISTER_BTN).click()
