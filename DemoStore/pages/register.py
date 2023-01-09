@@ -1,3 +1,5 @@
+from selenium.common import NoSuchElementException
+
 from DemoStore.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
@@ -35,7 +37,7 @@ class Register(BasePage):
         self.driver.find_element(*self.EMAIL).send_keys("test")
         error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'Error: Please provide a valid email address.'
-        assert error == expected_text, f"Error: expected: {expected_text}, actual: {hint}"
+        assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
 
     def password_hint(self):
