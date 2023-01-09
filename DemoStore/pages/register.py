@@ -39,6 +39,13 @@ class Register(BasePage):
         expected_text = 'Error: Please provide a valid email address.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
+    def already_registered(self):
+        self.driver.find_element(*self.EMAIL).send_keys("test123@gmail.com")
+        expected_text = 'An account is already registered with your email address.'
+        assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
+
+
+
 
     def password_hint(self):
         self.driver.find_element(*self.PASSWORD).send_keys("1a")
