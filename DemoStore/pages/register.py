@@ -45,9 +45,6 @@ class Register(BasePage):
         expected_text = 'An account is already registered with your email address.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
-
-
-
     def password_hint(self):
         self.driver.find_element(*self.PASSWORD).send_keys("1a")
         hint = self.driver.find_element(*self.PASSWORD_HINT).text
