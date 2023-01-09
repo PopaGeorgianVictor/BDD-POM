@@ -5,6 +5,7 @@ from selenium.webdriver.common.by import By
 class Login(BasePage):
     EMAIL = (By.ID, "username")
     PASSWORD = (By.ID, "password")
+    REMEMBER_ME = (By.ID, "rememberme")
 
 
 
