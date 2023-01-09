@@ -8,6 +8,7 @@ class Login(BasePage):
     PASSWORD = (By.ID, "password")
     REMEMBER_ME = (By.ID, "rememberme")
     LOGIN = (By.NAME, "login")
+    DASHBOARD = (By.LINK_TEXT, "Dashboard")
 
     def navigate_to_page(self):
         self.driver.get("http://demostore.supersqa.com/my-account/")
