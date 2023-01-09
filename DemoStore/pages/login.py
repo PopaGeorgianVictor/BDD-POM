@@ -17,3 +17,9 @@ class Login(BasePage):
 
     def insert_password(self):
         self.driver.find_element(*self.PASSWORD).send_keys("6KTPNqcwUAe7PAD")
+
+    def select_remember_me(self):
+        self.driver.find_element(*self.REMEMBER_ME).click()
+
+    def click_login(self):
+        self.driver.find_element(*self.LOGIN).click()
