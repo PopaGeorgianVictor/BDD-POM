@@ -8,7 +8,7 @@ class Login(BasePage):
     REGISTER_BTN = (By.NAME, "register")
     ERROR_TEXT = (By.XPATH,"//div[@id='content']//li[1]")
     DASHBOARD = (By.LINK_TEXT, "Dashboard")
-    PASSWORD_HINT = ()
+    PASSWORD_HINT = (By.CSS_SELECTOR, ".woocommerce-password-hint")
 
     def navigate_to_page(self):
         self.driver.get("http://demostore.supersqa.com/my-account/")
