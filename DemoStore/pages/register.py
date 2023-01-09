@@ -35,18 +35,24 @@ class Register(BasePage):
 
     def invalid_email(self):
         self.driver.find_element(*self.EMAIL).send_keys("test")
+
+    def invalid_email_msg(self):
         error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'Error: Please provide a valid email address.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
     def already_registered(self):
         self.driver.find_element(*self.EMAIL).send_keys("test123@gmail.com")
+
+    def already_registered_msg(self):
         error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'An account is already registered with your email address.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
     def password_hint(self):
         self.driver.find_element(*self.PASSWORD).send_keys("1a")
+
+    def password_hint_msg(self):
         hint = self.driver.find_element(*self.PASSWORD_HINT).text
         expected_text = 'Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & ).'
         assert hint == expected_text, f"Error: expected: {expected_text}, actual: {hint}"
