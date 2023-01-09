@@ -20,6 +20,12 @@ Feature:Testing if user can login on site
        When : I click on Log in button
        Then : I got the error message "Error: The password field is empty."
 
+     Scenario: Check if not registered username error message appears
+       When : I complete Username or email address field with abc123
+       When : I complete Password field with a random password
+       When : I click on Log in button
+       Then : I got the error message "Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead."
+
      Scenario: Check if wrong password error message appears
        When : I complete Username or email address field with test@email.com
        When : I entered a wrong password for the inserted username

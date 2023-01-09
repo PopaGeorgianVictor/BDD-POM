@@ -39,7 +39,11 @@ class Login(BasePage):
         error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'Error: Username is required.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
+
     def error_empty_password_field(self):
         error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'Error: The password field is empty.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
+
+    def invalid_email(self):
+        self.driver.find_element(*self.EMAIL).send_keys("test@gmail.com")
