@@ -23,6 +23,14 @@ class Register(BasePage):
     def click_on_register(self):
         self.driver.find_element(*self.REGISTER_BTN).click()
 
+    def check_register(self):
+        try:
+            self.driver.find_element(*self.DASHBOARD)
+            print('Registered successfully')
+
+        except NoSuchElementException:
+            print('Registration has not been completed')
+
     def password_hint(self):
         self.driver.find_element(*self.PASSWORD).send_keys("1a")
         hint = self.driver.find_element(*self.PASSWORD_HINT).text
