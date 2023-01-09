@@ -6,8 +6,7 @@ class Login(BasePage):
     EMAIL = (By.ID, "username")
     PASSWORD = (By.ID, "password")
     REMEMBER_ME = (By.ID, "rememberme")
-
-
+    LOGIN = (By.NAME, "login")
 
 
     def navigate_to_page(self):
