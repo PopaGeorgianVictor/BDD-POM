@@ -22,12 +22,24 @@ def step_impl(context):
 
 @when("I complete Email address field with a wrong address format")
 def step_impl(context):
-    context.register_object.already_registered()
+    context.register_object.invalid_email()
 
 @when("I click on Register button")
 def step_impl(context):
     context.register_object.click_on_register()
 
 @then("I got the error message 'Please provide a valid email address'")
+def step_impl(context):
+    context.register_object.invalid_email_msg()
+
+@when("I complete Email address field with an already registered address")
+def step_impl(context):
+    context.register_object.already_registered()
+
+@when("I click on Register button")
+def step_impl(context):
+    context.register_object.click_on_register()
+
+@then("I got the error message 'An account is already registered with your email address.'")
 def step_impl(context):
     context.register_object.already_registered_msg()
