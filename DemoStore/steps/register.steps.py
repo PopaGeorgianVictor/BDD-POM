@@ -27,3 +27,7 @@ def step_impl(context):
 @when("I click on Register button")
 def step_impl(context):
     context.register_object.click_on_register()
+
+@then("I got the error message 'Please provide a valid email address'')
+def step_impl(context):
+    context.register_object.check_register()
