@@ -7,6 +7,7 @@ Feature:Testing if user can login on site
        When : I complete Username or email address field with a right address
        When : I complete Password field with a right password
        When : I select checkbox  Remember me
+       Then : I can select checkboxes
        When : I click on Log in button
        Then : I am able to log in
 

@@ -20,7 +20,8 @@ class Login(BasePage):
         self.driver.find_element(*self.PASSWORD).send_keys("6KTPNqcwUAe7PAD")
 
     def select_remember_me(self):
-        self.driver.find_element(*self.REMEMBER_ME).click()
+        checkbox = self.driver.find_element(*self.REMEMBER_ME).click()
+        assert checkbox.is_selected(), 'Checkbox not selected'
 
     def click_login(self):
         self.driver.find_element(*self.LOGIN_BTN).click()
@@ -32,3 +33,4 @@ class Login(BasePage):
 
         except NoSuchElementException:
             print('Log in failed')
+
