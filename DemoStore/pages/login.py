@@ -9,6 +9,7 @@ class Login(BasePage):
     REMEMBER_ME = (By.ID, "rememberme")
     LOGIN_BTN = (By.NAME, "login")
     DASHBOARD = (By.LINK_TEXT, "Dashboard")
+    ERROR_MSG =(By.XPATH,"//div[@id='content']//li[1]")
 
     def navigate_to_page(self):
         self.driver.get("http://demostore.supersqa.com/my-account/")
