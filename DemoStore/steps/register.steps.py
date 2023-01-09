@@ -8,3 +8,10 @@ def step_impl(context):
 def step_impl(context):
     context.register_object.insert_email()
 
+@when("I complete Password field which respects the security conditions")
+def step_impl(context):
+    context.register_object.insert_password()
+
+@when("I click on Register button")
+def step_impl(context):
+    context.register_object.click_on_register()
