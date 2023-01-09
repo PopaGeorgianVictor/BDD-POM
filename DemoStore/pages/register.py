@@ -41,6 +41,7 @@ class Register(BasePage):
 
     def already_registered(self):
         self.driver.find_element(*self.EMAIL).send_keys("test123@gmail.com")
+        error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'An account is already registered with your email address.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
