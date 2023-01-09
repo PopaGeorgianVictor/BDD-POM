@@ -15,3 +15,7 @@ def step_impl(context):
 @when("I click on Register button")
 def step_impl(context):
     context.register_object.click_on_register()
+
+@then("Register was successful")
+def step_impl(context):
+    context.register_object.check_register()
