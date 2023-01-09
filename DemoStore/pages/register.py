@@ -31,6 +31,13 @@ class Register(BasePage):
         except NoSuchElementException:
             print('Registration has not been completed')
 
+    def invalid_email(self):
+        self.driver.find_element(*self.EMAIL).send_keys("test")
+        error = self.driver.find_element(*self.ERROR_TEXT).text
+        expected_text = 'Error: Please provide a valid email address.'
+        assert error == expected_text, f"Error: expected: {expected_text}, actual: {hint}"
+
+
     def password_hint(self):
         self.driver.find_element(*self.PASSWORD).send_keys("1a")
         hint = self.driver.find_element(*self.PASSWORD_HINT).text
