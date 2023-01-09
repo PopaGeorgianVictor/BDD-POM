@@ -43,3 +43,11 @@ def step_impl(context):
 @then("I got the error message 'An account is already registered with your email address.'")
 def step_impl(context):
     context.register_object.already_registered_msg()
+
+@when("I complete password field but without respecting the security requirements")
+def step_impl(context):
+    context.register_object.password_hint()
+
+@then('Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & ).')
+def step_impl(context):
+    context.register_object.password_hint_msg()
