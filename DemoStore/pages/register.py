@@ -6,7 +6,7 @@ class Register(BasePage):
     EMAIL = (By.ID, "reg_email")
     PASSWORD = (By.ID, "reg_password")
     REGISTER_BTN = (By.NAME, "register")
-    ERROR_TEXT = (By.XPATH,"//div[@id='content']//li[1]")
+    ERROR_MSG = (By.XPATH, "//div[@id='content']//li[1]")
     DASHBOARD = (By.LINK_TEXT, "Dashboard")
     PASSWORD_HINT = (By.CSS_SELECTOR, ".woocommerce-password-hint")
 
@@ -33,7 +33,7 @@ class Register(BasePage):
 
     def invalid_email(self):
         self.driver.find_element(*self.EMAIL).send_keys("test")
-        error = self.driver.find_element(*self.ERROR_TEXT).text
+        error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = 'Error: Please provide a valid email address.'
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {hint}"
 
