@@ -22,3 +22,9 @@ class Login(BasePage):
 
     def click_on_register(self):
         self.driver.find_element(*self.REGISTER_BTN).click()
+
+    def password_hint(self):
+        self.driver.find_element(*self.PASSWORD).send_keys("1a")
+        hint = self.driver.find_element(*self.PASSWORD_HINT).text
+        expected_text = 'Hint: The password should be at least twelve characters long. To make it stronger, use upper and lower case letters, numbers, and symbols like ! " ? $ % ^ & ).'
+        assert hint == expected_text, f"Error: expected: {expected_text}, actual: {hint}"
