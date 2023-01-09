@@ -7,7 +7,7 @@ class Login(BasePage):
     EMAIL = (By.ID, "username")
     PASSWORD = (By.ID, "password")
     REMEMBER_ME = (By.ID, "rememberme")
-    LOGIN = (By.NAME, "login")
+    LOGIN_BTN = (By.NAME, "login")
     DASHBOARD = (By.LINK_TEXT, "Dashboard")
 
     def navigate_to_page(self):
@@ -23,4 +23,12 @@ class Login(BasePage):
         self.driver.find_element(*self.REMEMBER_ME).click()
 
     def click_login(self):
-        self.driver.find_element(*self.LOGIN).click()
+        self.driver.find_element(*self.LOGIN_BTN).click()
+
+    def check_login(self):
+        try:
+            self.driver.find_element(*self.DASHBOARD)
+            print('Log in successfully')
+
+        except NoSuchElementException:
+            print('Log in failed')
