@@ -19,3 +19,11 @@ def step_impl(context):
 @then("Register was successful")
 def step_impl(context):
     context.register_object.check_register()
+
+@when("I complete Email address field with a wrong address format")
+def step_impl(context):
+    context.register_object.already_registered()
+
+@when("I click on Register button")
+def step_impl(context):
+    context.register_object.click_on_register()
