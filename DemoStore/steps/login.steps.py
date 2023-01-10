@@ -23,3 +23,7 @@ def step_impl(context):
 @when("I click on Log in button")
 def step_impl(context):
     context.login_object.click_login()
+
+@then("I am able to log in")
+def step_impl(context):
+    context.login_object.check_login()
