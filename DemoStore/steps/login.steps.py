@@ -34,4 +34,9 @@ def step_impl(context):
 
 @then('I got the error message "Error: The password field is empty."')
 def step_impl(context):
-    context.login_object.error_empty_email_field()
+    context.login_object.error_password_email_field()
+
+@when("I complete Username or email address field with abc123")
+def step_impl(context):
+    context.login_object.click_login()
+
