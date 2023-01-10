@@ -48,5 +48,11 @@ class Login(BasePage):
     def invalid_email(self):
         self.driver.find_element(*self.EMAIL).send_keys("abc123")
         error = self.driver.find_element(*self.ERROR_MSG).text
-        expected_text = 'Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead. '
+        expected_text = 'Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead.'
+        assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
+
+    def invalid_password(self):
+        self.driver.find_element(*self.PASSWORD).send_keys("abc123")
+        error = self.driver.find_element(*self.ERROR_MSG).text
+        expected_text = "Error: The password you entered for the email address test123@gmail.com is incorrect. Lost your password?"
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"

@@ -27,7 +27,7 @@ Feature:Testing if user can login on site
        Then : I got the error message "Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead."
 
      Scenario: Check if wrong password error message appears
-       When : I complete Username or email address field with test@email.com
+       When : I complete Username or email address field with test123@email.com
        When : I entered a wrong password for the inserted username
        When : I click on Log in button
-       Then : I got the error message "Error: The password you entered for the username test@email.com is incorrect. Lost your password?"
+       Then : I got the error message "Error: The password you entered for the username test123@email.com is incorrect. Lost your password?"
