@@ -46,4 +46,7 @@ class Login(BasePage):
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
 
     def invalid_email(self):
-        self.driver.find_element(*self.EMAIL).send_keys("test@gmail.com")
+        self.driver.find_element(*self.EMAIL).send_keys("abc123")
+        error = self.driver.find_element(*self.ERROR_MSG).text
+        expected_text = 'Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead. '
+        assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
