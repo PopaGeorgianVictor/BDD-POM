@@ -60,3 +60,4 @@ class Login(BasePage):
         error = self.driver.find_element(*self.ERROR_MSG).text
         expected_text = "Error: The password you entered for the email address test123@gmail.com is incorrect. Lost your password?"
         assert error == expected_text, f"Error: expected: {expected_text}, actual: {error}"
+

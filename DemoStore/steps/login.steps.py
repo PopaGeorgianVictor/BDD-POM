@@ -38,5 +38,8 @@ def step_impl(context):
 
 @when("I complete Username or email address field with abc123")
 def step_impl(context):
-    context.login_object.click_login()
+    context.login_object.invalid_email()
 
+@then('I got the error message "Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead."')
+def step_impl(context):
+    context.login_object.invalid_email_check()
