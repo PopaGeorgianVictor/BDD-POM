@@ -43,3 +43,7 @@ def step_impl(context):
 @then('I got the error message "Error: The username abc123 is not registered on this site. If you are unsure of your username, try your email address instead."')
 def step_impl(context):
     context.login_object.invalid_email_check()
+
+@when("I entered a wrong password for the inserted username")
+def step_impl(context):
+    context.login_object.invalid_password()
