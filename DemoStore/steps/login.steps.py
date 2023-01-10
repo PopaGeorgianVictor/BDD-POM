@@ -31,3 +31,7 @@ def step_impl(context):
 @then('I got the error message "Error: Username is required."')
 def step_impl(context):
     context.login_object.error_empty_email_field()
+
+@then('I got the error message "Error: The password field is empty."')
+def step_impl(context):
+    context.login_object.error_empty_email_field()
