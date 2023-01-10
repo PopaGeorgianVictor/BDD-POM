@@ -19,3 +19,7 @@ def step_impl(context):
 @then("The checkbox was selected")
 def step_impl(context):
     context.login_object.select_remember_me()
+
+@when("I click on Log in button")
+def step_impl(context):
+    context.login_object.click_login()
