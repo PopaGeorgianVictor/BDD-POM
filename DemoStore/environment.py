@@ -1,4 +1,4 @@
-from DemoStore.pages.register import Login
+from DemoStore.pages.login import Login
 from DemoStore.pages.register import Register
 from browser import Browser
 
