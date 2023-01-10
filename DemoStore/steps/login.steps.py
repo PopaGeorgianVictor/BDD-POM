@@ -47,3 +47,7 @@ def step_impl(context):
 @when("I entered a wrong password for the inserted username")
 def step_impl(context):
     context.login_object.invalid_password()
+
+@then('I got the error message "Error: The password you entered for the username test123@email.com is incorrect. Lost your password?"')
+def step_impl(context):
+    context.login_object.invalid_password_check()
