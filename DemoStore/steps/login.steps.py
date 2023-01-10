@@ -11,3 +11,7 @@ def step_impl(context):
 @when("I complete Password field with a right password")
 def step_impl(context):
     context.login_object.insert_password()
+
+@when("I select checkbox  Remember me")
+def step_impl(context):
+    context.login_object.select_remember_me()
