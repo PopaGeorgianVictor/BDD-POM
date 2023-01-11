@@ -9,7 +9,7 @@ class Checkbox(BasePage):
     ALL_CHECKBOXES = (By.NAME, 'age-group-checkbox')
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/checkbox")
 
     def check_number_checkbokes(self):
         expected_number_of_options = 4

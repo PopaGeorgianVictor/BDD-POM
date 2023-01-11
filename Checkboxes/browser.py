@@ -6,7 +6,6 @@ from selenium.webdriver.firefox.service import Service
 class Browser:
 
     driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
-    driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/checkbox")
     driver.maximize_window()
     driver.implicitly_wait(3)
 
