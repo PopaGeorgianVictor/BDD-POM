@@ -12,7 +12,7 @@ class Dropdown(BasePage):
     ELEM =(By.CSS_SELECTOR, "span[title='PORTOFOLIO']")
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/dropdowns")
 
     def click_first_dropdown(self):
         self.driver.find_element(*self.FIRST_DROPDOWN).click()

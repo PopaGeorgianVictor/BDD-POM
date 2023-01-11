@@ -4,8 +4,7 @@ from selenium.webdriver.firefox.service import Service
 
 
 class Browser:
-    driver = webdriver.Chrome(service=Service(GeckoDriverManager().install()))
-    driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/dropdown")
+    driver = webdriver.Firefox(service=Service(GeckoDriverManager().install()))
     driver.maximize_window()
     driver.implicitly_wait(3)
 
