@@ -16,7 +16,7 @@ class Alerts(BasePage):
     INSERTED_TEXT = "test"
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/alert_confirm_prompt")
 
     def click_html_alert(self):
         self.driver.find_element(*self.HTML_ALERT).click()
