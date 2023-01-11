@@ -12,7 +12,7 @@ class Radio(BasePage):
     BTN4 = (By.CSS_SELECTOR, "input[value='rock fm']")
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/radio-btn")
 
     def default_is_selected(self):
         expected_default_value = 'rock fm'
