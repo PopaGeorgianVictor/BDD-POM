@@ -11,7 +11,7 @@ class RightClick(BasePage):
     ELEM = (By.LINK_TEXT, 'PORTOFOLIO')
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://github.com/PopaGeorgianVictor/SELENIUM-UnitTest/blob/master/right_click.py")
 
     def right_click(self):
         ActionChains(self.driver).context_click().perform()
