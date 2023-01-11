@@ -11,7 +11,7 @@ class Frames(BasePage):
     FRAMES = (By.TAG_NAME, 'iframe')
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/iFrame")
 
     def len_frames(self):
         frames = self.driver.find_elements(*self.FRAMES)
