@@ -8,7 +8,7 @@ class Search(BasePage):
     ELEM = (By.LINK_TEXT, "LISTS")
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/search_bar")
 
     def search_for_elem(self):
         self.driver.find_element(*self.SEARCH_BAR).send_keys('lists')
