@@ -8,7 +8,7 @@ class Resize(BasePage):
     ELEM_RESIZABLE = (By.ID, 'resizable')
 
     def navigate_to_page(self):
-        self.driver.get()
+        self.driver.get("https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/resizable")
 
     def resizable(self):
         ActionChains(self.driver).drag_and_drop_by_offset(self.driver.find_element(*self.RESIZE), 500, 500).perform()
