@@ -1,6 +1,6 @@
 from Search.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
-from selenium.common import NoSuchElementException
+from selenium.common.exceptions import NoSuchElementException
 
 class Search(BasePage):
 
