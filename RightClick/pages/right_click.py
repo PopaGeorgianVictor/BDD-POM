@@ -2,7 +2,7 @@ import time
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver import ActionChains
 from selenium.webdriver.common.by import By
-from Radios.pages.base_page import BasePage
+from RightClick.pages.base_page import BasePage
 
 
 class RightClick(BasePage):

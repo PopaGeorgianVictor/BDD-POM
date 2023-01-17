@@ -1,6 +1,6 @@
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.by import By
-from Dropdown.pages.base_page import BasePage
+from Alerts.pages.base_page import BasePage
 
 
 class Alerts(BasePage):

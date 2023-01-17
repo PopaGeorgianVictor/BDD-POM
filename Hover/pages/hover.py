@@ -1,6 +1,6 @@
 import time
 from selenium.webdriver import ActionChains
-from Search.pages.base_page import BasePage
+from Hover.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import NoSuchElementException
 
