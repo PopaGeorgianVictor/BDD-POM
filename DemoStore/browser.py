@@ -1,10 +1,10 @@
 from selenium import webdriver
 from webdriver_manager.firefox import GeckoDriverManager
-from selenium.webdriver.firefox.service import Service
+
 
 class Browser:
 
-    driver = webdriver.Chrome(service=Service(GeckoDriverManager().install()))
+    driver = webdriver.Firefox(executable_path=GeckoDriverManager().install())
     driver.maximize_window()
     driver.implicitly_wait(3)
     driver.set_page_load_timeout(10)
